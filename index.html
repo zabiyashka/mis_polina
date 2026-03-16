@@ -1,143 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вхід | MIS POLINA</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <style>
-        :root {
-            --primary: #4f46e5;
-            --primary-hover: #4338ca;
-            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: var(--bg-gradient);
-            background-attachment: fixed;
-        }
-
-        /* Ефект матового скла для контейнера */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-            padding: 40px;
-            width: 100%;
-            max-width: 400px;
-            margin: 20px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        @media (min-width: 1024px) {
-            .glass-card:hover {
-                transform: translateY(-5px);
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Вхід | MIS POLINA</title>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <style>
+            :root {
+                --primary: #4f46e5;
+                --primary-hover: #4338ca;
+                --bg-gradient: linear-gradient(
+                    135deg,
+                    #667eea 0%,
+                    #764ba2 100%
+                );
             }
-        }
 
-        .logo-placeholder {
-            width: 80px;
-            height: 80px;
-            background: #f0f4ff;
-            border-radius: 20px;
-            margin: 0 auto 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 40px;
-        }
+            * {
+                box-sizing: border-box;
+                -webkit-tap-highlight-color: transparent;
+            }
 
-        h1 {
-            margin: 0 0 10px;
-            font-size: 28px;
-            font-weight: 800;
-            color: #1f2937;
-            letter-spacing: -0.5px;
-        }
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Helvetica, Arial, sans-serif;
+                background: var(--bg-gradient);
+                background-attachment: fixed;
+            }
 
-        p {
-            color: #6b7280;
-            font-size: 16px;
-            margin-bottom: 30px;
-            line-height: 1.5;
-        }
-
-        /* Кнопка, що ідеально підходить для великого пальця на смартфоні */
-        .action-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 18px 24px;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 16px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
-        }
-
-        .action-button:hover {
-            background-color: var(--primary-hover);
-            box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.4);
-        }
-
-        .action-button:active {
-            transform: scale(0.98);
-        }
-
-        .action-button svg {
-            margin-left: 10px;
-            transition: transform 0.2s ease;
-        }
-
-        .action-button:hover svg {
-            transform: translateX(4px);
-        }
-
-        /* Мобільна оптимізація */
-        @media (max-width: 480px) {
+            /* Ефект матового скла для контейнера */
             .glass-card {
-                padding: 30px 20px;
-                border-radius: 32px; /* Більш закруглені кути на мобільних */
-                margin: 15px;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                border-radius: 24px;
+                padding: 40px;
+                width: 100%;
+                max-width: 400px;
+                margin: 20px;
+                text-align: center;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease;
             }
-            h1 { font-size: 24px; }
-            .action-button { padding: 16px 20px; font-size: 17px; }
-        }
-    </style>
-</head>
-<body>
 
-    <div class="glass-card">
-        <div class="logo-placeholder">🏥</div>
-        <h1>MIS POLINA</h1>
-        <p>Ваш персональний кабінет для управління медичними візитами</p>
-        
-        <a href="https://script.google.com/macros/s/AKfycbyV1sBHVvGqi646hV4G_y2zOpvoJjit2cdXV5wvy8f5f7uU4RABYa0idc88x-NtSg8G/exec" class="action-button">
-            Увійти в систему
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-        </a>
-    </div>
+            @media (min-width: 1024px) {
+                .glass-card:hover {
+                    transform: translateY(-5px);
+                }
+            }
 
-</body>
+            .logo-placeholder {
+                width: 80px;
+                height: 80px;
+                background: #f0f4ff;
+                border-radius: 20px;
+                margin: 0 auto 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;
+            }
+
+            h1 {
+                margin: 0 0 10px;
+                font-size: 28px;
+                font-weight: 800;
+                color: #1f2937;
+                letter-spacing: -0.5px;
+            }
+
+            p {
+                color: #6b7280;
+                font-size: 16px;
+                margin-bottom: 30px;
+                line-height: 1.5;
+            }
+
+            /* Кнопка, що ідеально підходить для великого пальця на смартфоні */
+            .action-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 18px 24px;
+                background-color: var(--primary);
+                color: white;
+                text-decoration: none;
+                border-radius: 16px;
+                font-size: 18px;
+                font-weight: 600;
+                transition: all 0.2s ease;
+                box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+            }
+
+            .action-button:hover {
+                background-color: var(--primary-hover);
+                box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.4);
+            }
+
+            .action-button:active {
+                transform: scale(0.98);
+            }
+
+            .action-button svg {
+                margin-left: 10px;
+                transition: transform 0.2s ease;
+            }
+
+            .action-button:hover svg {
+                transform: translateX(4px);
+            }
+
+            /* Мобільна оптимізація */
+            @media (max-width: 480px) {
+                .glass-card {
+                    padding: 30px 20px;
+                    border-radius: 32px; /* Більш закруглені кути на мобільних */
+                    margin: 15px;
+                }
+                h1 {
+                    font-size: 24px;
+                }
+                .action-button {
+                    padding: 16px 20px;
+                    font-size: 17px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="glass-card">
+            <div class="logo-placeholder">🏥</div>
+            <h1>MIS POLINA</h1>
+            <p>Ваш персональний кабінет для управління медичними візитами</p>
+
+            <a
+                href="https://script.google.com/macros/s/AKfycbyV1sBHVvGqi646hV4G_y2zOpvoJjit2cdXV5wvy8f5f7uU4RABYa0idc88x-NtSg8G/exec"
+                class="action-button"
+            >
+                Увійти в систему
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+        <div class="glass-card">
+            <div class="logo-placeholder">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <path d="M16 13l-4 4-2-2-2 2"></path>
+                </svg>
+            </div>
+            <h1>Звітність / Reporting</h1>
+            <a
+                href="https://script.google.com/macros/s/AKfycbyNRU4KhdkXtNJH8amgZU9cjyOX-OdNgwpBDenxHpCXfDD_iFCJZuwBklBFVZFiJ8lJ/exec"
+                class="action-button"
+            >
+                Додати чек / Add a check
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path
+                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                    ></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <path d="M16 13l-4 4-2-2-2 2"></path>
+                </svg>
+            </a>
+        </div>
+    </body>
 </html>
